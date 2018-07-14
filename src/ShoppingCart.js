@@ -1,6 +1,7 @@
 class ShoppingCart {
-    constructor() {
+    constructor(name) {
         this.items = []
+        this.name = name
        
         
       // ...
@@ -24,8 +25,8 @@ clear()  {
 }
 //this is supposed to clone whichever cart it is called on and return a separete but same cart
 clone(cart){ 
-      
-    this.cart2= Object.assign({},cart)
+    this.cart2 = new ShoppingCart(cart2)
+    cart2= Object.assign({},cart)
     
     return this.cart2
 }

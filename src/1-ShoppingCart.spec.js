@@ -2,12 +2,12 @@ const assert = require("assert")
 
 describe("Assignment 1 - ShoppingCart", function() {
 
-  it.only("JS file should exist, and exported value should be a constructor", function() {
+  it("JS file should exist, and exported value should be a constructor", function() {
     const ShoppingCart = require("../src/ShoppingCart")
     new ShoppingCart()
   })
 
-  it.only("should be able to add items", function() {
+  it("should be able to add items", function() {
     const ShoppingCart = require("../src/ShoppingCart")
     const cart = new ShoppingCart()
     assert.deepStrictEqual(
@@ -29,7 +29,7 @@ describe("Assignment 1 - ShoppingCart", function() {
     )
   })
 
-  it.only("should be able to clear items", function() {
+  it("should be able to clear items", function() {
     const ShoppingCart = require("../src/ShoppingCart")
     const cart = new ShoppingCart()
     cart.addItem("Trash can", 1, 15.5)
@@ -41,7 +41,7 @@ describe("Assignment 1 - ShoppingCart", function() {
     )
   })
 
-  it.only("cloned should be a separate copy", function() {
+  it("cloned should be a separate copy", function() {
     const ShoppingCart = require("../src/ShoppingCart")
     const cart1 = new ShoppingCart()
     cart1.addItem("Rolex watch", 2, 250.1)
